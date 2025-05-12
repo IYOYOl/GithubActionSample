@@ -10,7 +10,7 @@ payload = {
       "ip": "246.219.21.185",
       "zeppId": "1133421351",
       "appToken": "ZQVBQFJyQktGHlp6QkpbRl5LRl5qek4uXAQABAAAAAHypV5bKTBuTiDW9vN7FR4ODxDhoGkmBXWYj9WzJZCwnrcll35hRNWuO8qkxAkex5bL1vIu1FdwDnan-h0fat4cp9JPIi7nYKVhWc0NU2LjzE-5askc0outOPWcJU2tK8o-M7Hd_hSckCdKLDtDmaqR6othzUVvS6bg-ZjbGiQqxtdHxhJJomSGshQdcpMiC2Q",
-      "step": "33333"
+      "step": "666666"
     }
   ],
   "clientInfo": {
