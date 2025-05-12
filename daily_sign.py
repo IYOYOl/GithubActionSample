@@ -1,76 +1,53 @@
 import requests
-import json
 
-url = "https://env-00jxtfd3wr9d.api-hz.cloudbasefunction.cn/functions/invokeFunction"
+url = "https://www.douyin.com/passport/web/send_code/"
+
+params = {
+  'passport_jssdk_version': "2.2.2",
+  'passport_jssdk_type': "pro",
+  'aid': "6383",
+  'language': "zh",
+  'account_sdk_source': "web",
+  'account_sdk_source_info': "7e276d64776172647760466a6b66707777606b667c273f3d292772606761776c736077273f63646976602927666d776a686061776c736077273f63646976602927766d60696961776c736077273f717770602927756970626c6b76273f352927756077686c76766c6a6b76273f5e7e276b646860273f276b6a716c636c6664716c6a6b762729277671647160273f2761606b6c606127785829276c6b6b60774d606c626d71273f3431373329276c6b6b6077526c61716d273f32373529276a707160774d606c626d71273f32343629276a70716077526c61716d273f363335292776716a64776260567164717076273f7e276c6b61607d60614147273f7e276c6167273f276a676f6066712729276a75606b273f2763706b66716c6a6b2729276c6b61607d60614147273f276a676f6066712729274c41474e607c57646b6260273f2763706b66716c6a6b2729276a75606b4164716467647660273f27706b6160636c6b60612729276c7656646364776c273f636469766029276d6476436071666d273f6364697660782927696a66646956716a77646260273f7e276c76567075756a77714956716a77646260273f717770602927766c7f60273f3335373c35292772776c7160273f7177706078292776716a7764626054706a7164567164717076273f7e277076646260273f343030313735292774706a7164273f34313630333c3231323c333d29276c7655776c73647160273f6364697660787829277260676269273f7e2773606b616a77273f6b706969292777606b6160776077273f6b7069697829276b6a716c636c6664716c6a6b556077686c76766c6a6b273f276b6a6b60272927756077636a7768646b6660273f7e27716c68604a776c626c6b273f343231333d3c3d3130353636322b3d2927707660614f564d606475566c7f60273f34353635353535353529276b64736c6264716c6a6b516c686c6b62273f7e276160666a616061476a617c566c7f60273f32303c3d3d342927606b71777c517c7560273f276b64736c6264716c6a6b2729276c6b6c716c64716a77517c7560273f276b64736c6264716c6a6b2729276b646860273f276d717175763f2a2a7272722b616a707c6c6b2b666a682a3a6c765a63776a685a686a676c69605a6d6a6860383427292777606b61607747696a666e6c6b62567164717076273f276b6a6b2867696a666e6c6b62272927766077736077516c686c6b62273f276c6b6b60772971715a6462722966616b286664666d602960616260296a776c626c6b272927627069605671647771273f3232342b343535353535353534313c353429276270696041707764716c6a6b273f36342b353c3c3c3c3c3c3c3135363c30363378782927776074706076715a6d6a7671273f277272722b616a707c6c6b2b666a68272927776074706076715a7564716d6b646860273f272a27292767776a72766077273f7e7878",
+  'passport_ztsdk': "3.1.15",
+  'passport_verify': "1.0.27",
+  'request_host': "https://www.douyin.com",
+  'biz_trace_id': "1e5e5bf8",
+  'device_platform': "web_app",
+  'msToken': "aNUwAcPwq1f5AieHhZxWyszUAAoOhY_Lu_pRsyC-ZONn7xTXZMh9BP06fJbHWmYj78r7GZACdLWruzTgDpk4L4yc8vJrBUb8KK8UU0utdaTpR4lUu2p8YyWBMW9ecqDiSFeAjhdJ_bybSBb0FJjM3xWOr5WemLPXIAybWCzAZS2M7Pd8u8301mk=",
+  'a_bogus': "mj4RDtSwDZWnad/b8ONmSU/UpXolNTWyQPi/ROFT7NPMGwMc4bPjoLLwaPNoRLIPfWBTkF/HTdPiTDETOz1Z/99kompfuPt6I0Vcnymo/ZHVTBJh1r8MCtvzzhsuUATYTc5CiQwX1t19XxH-ZrrsUc1JC/xK-RSsFpV84psocNnWf80co2BBPMXgPgGYQBQIsrf="
+}
 
 payload = {
-  "method": "zeppStep",
-  "params": [
-    {
-      "ip": "246.219.21.185",
-      "zeppId": "1133421351",
-      "appToken": "ZQVBQFJyQktGHlp6QkpbRl5LRl5qek4uXAQABAAAAAHypV5bKTBuTiDW9vN7FR4ODxDhoGkmBXWYj9WzJZCwnrcll35hRNWuO8qkxAkex5bL1vIu1FdwDnan-h0fat4cp9JPIi7nYKVhWc0NU2LjzE-5askc0outOPWcJU2tK8o-M7Hd_hSckCdKLDtDmaqR6othzUVvS6bg-ZjbGiQqxtdHxhJJomSGshQdcpMiC2Q",
-      "step": "33333"
-    }
-  ],
-  "clientInfo": {
-    "PLATFORM": "web",
-    "OS": "android",
-    "APPID": "__UNI__3F9343F",
-    "DEVICEID": "17468956407381144508",
-    "scene": 1001,
-    "appId": "__UNI__3F9343F",
-    "appLanguage": "zh-Hans",
-    "appName": "出去走走",
-    "appVersion": "1.0.0",
-    "appVersionCode": "100",
-    "browserName": "chrome",
-    "browserVersion": "134.0.6998.39",
-    "deviceId": "17468956407381144508",
-    "deviceModel": "V2207A",
-    "deviceType": "phone",
-    "hostName": "chrome",
-    "hostVersion": "134.0.6998.39",
-    "osName": "android",
-    "osVersion": "14",
-    "ua": "Mozilla/5.0 (Linux; Android 14; V2207A Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/134.0.6998.39 Mobile Safari/537.36",
-    "uniCompilerVersion": "4.64",
-    "uniPlatform": "web",
-    "uniRuntimeVersion": "4.64",
-    "locale": "zh-Hans",
-    "LOCALE": "zh-Hans"
-  }
+  'is6Digits': "1",
+  'mix_mode': "1",
+  'mobile': "19055178320",
+  'type': "3731",
+  'fixed_mix_mode': "1"
 }
 
 headers = {
   'User-Agent': "Mozilla/5.0 (Linux; Android 14; V2207A Build/UP1A.231005.007; wv) AppleWebKit/537.36 (KHTML, like Gecko) Version/4.0 Chrome/134.0.6998.39 Mobile Safari/537.36",
+  'Accept': "application/json, text/javascript",
   'Accept-Encoding': "gzip, deflate, br, zstd",
-  'Content-Type': "application/json",
-  'x-to-function-name': "zeppTodo",
-  'x-request-id': "48138a59-7e99-4c36-a148-bd5849e39ca6",
-  'Authorization': "HMAC-SHA256 Credential=hzDTSCpEIdojYZSE, SignedHeaders=x-client-timestamp;x-from-app-id;x-from-env-id;x-from-function-name;x-from-instance-id;x-to-env-id;x-to-function-name, Signature=3c1cc92cd8a180d99b53a87dda99b210379c484163da6abf81abbec30f540f61",
-  'x-from-env-id': "env-00jxtfd3wr9d",
+  'sec-ch-ua-platform': "\"Android\"",
+  'x-tt-session-dtrait': "d1_GRax5ExlTNjQ9R8yUippgn6oT8uUS4lpPCQIJulA8Dwp2+NjKS090nYlzOC3N/0wv5WKVkuX73fH4ho78fSFyRUQZHYuRn/vtoBTs/62CX4r8KTniW8CDO2AH6En+V+E75VXotN9AtybW0z8il678VEW6Xy5RDT0dtpKt/jO4X+fry/oS+inaM5+ZwDnH2LO5s1oanwbv+ztoTBAGzL6ag4R1r0VEwWjjY9eg/zm7zi6pHrISfLflArFOMq515iTLZDiNX+B4Q6JxK/9UjeLNxvl9UIUG/3Uz4m7ijr5AHGHrnp/RN0a3+V6awoOsv1IlsUFoJjA/iXybjVoYBtGTQ==_LnfpHFXrRCZgrtH4s2OfEr0K5AhNHyCxVXSlI18/crckum6lWqJy9uEruygdFXqd4I9kVmFmrOc7GQauBbYlEGIsjnRqtwAlOJImUbiuHWc0LRrWsNfIoGXqZZV2pm9hpjwrz7nVej/Tz46CIyFiTgHFWyqArbjudqMhZ58sGS47VK9X9udgZnvWr/GagxqQdMtr1gOqtPhBkhpJT90lq1edpg2O5niNLtk2iIY46GMl0uepyTqT3Wh7Qgvl0WpLl1dguf0RDdTJmifb5O/Ir7y70gg28cOkv0czL6Tu5osom/ZKudv+4LWZveiCjSxprg47OtLq3dAr9Q4WjJ8mxUIpMU2tX2OKHcQrh0dc9WYVAMWBKhIel0UijTv11TFmD1p0e5ZKFDGROZX/Hcu37KrYLS4xkKNL4uDkxyVS1AM=",
   'sec-ch-ua': "\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Android WebView\";v=\"134\"",
   'sec-ch-ua-mobile': "?1",
-  'sec-ch-ua-platform': "\"Android\"",
-  'x-from-instance-id': "1746899834581",
-  'x-client-timestamp': "1746899834581",
-  'x-to-env-id': "env-00jxtfd3wr9d",
-  'x-trace-id': "48138a59-7e99-4c36-a148-bd5849e39ca6",
-  'x-from-app-id': "2021005136661698",
-  'x-alipay-source': "client",
-  'x-from-function-name': "zeppTodo",
-  'x-alipay-callid': "48138a59-7e99-4c36-a148-bd5849e39ca6",
-  'Origin': "https://mm-2g2i5f9t68b62f2e-1305007022.tcloudbaseapp.com",
-  'X-Requested-With': "privacy.explorer.fast.safe.browser",
-  'Sec-Fetch-Site': "cross-site",
-  'Sec-Fetch-Mode': "cors",
-  'Sec-Fetch-Dest': "empty",
-  'Referer': "https://mm-2g2i5f9t68b62f2e-1305007022.tcloudbaseapp.com/",
-  'Accept-Language': "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-  'Cookie': "aliyungf_tc=4d1f7de2b1633ba1e84515ef173aca9a57d0884ef9bfdcf46036a2a5cddff0a8"
+  'x-tt-passport-trace-id': "1e5e5bf8",
+  'x-tt-passport-csrf-token': "717f0f3ae3508ca0dfa7d2bfff62115a",
+  'x-secsdk-csrf-token': "DOWNGRADE",
+  'origin': "https://www.douyin.com",
+  'x-requested-with': "privacy.explorer.fast.safe.browser",
+  'sec-fetch-site': "same-origin",
+  'sec-fetch-mode': "cors",
+  'sec-fetch-dest': "empty",
+  'referer': "https://www.douyin.com/?is_from_mobile_home=1&recommend=1",
+  'accept-language': "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+  'priority': "u=1, i",
+  'Cookie': "ttwid=1%7CvDEHc4jqKZKkcIZmK08XpYqXILJnfJmUeZjDs8T5NB4%7C1735887542%7Cc77d39fa8f14ab7812aed1bf5a0fec03c50584c93599d89047ec7e2888a57184; UIFID_TEMP=5cf5e23c61995d2d3ac60e3037090f2ed19001663b914111b9d9cfee882a1ea5765ef390cb866f373ef0f6386e568fd859bfa2a4b3f42c64779c839d10a5532c63e97c263782ad8e05af7c6cb0c78a8a; hevc_supported=true; csrf_session_id=2523889e7c23f70b205c7343f6dc60c8; fpk1=U2FsdGVkX19T7d20l0U6H2++zy4Q1eUDeIuTmfawAUQW2w8kkzPuxxfKOUTPFW/0CtIlsR8ypK6JGxhdfg7b2w==; fpk2=56a20463463e0ea3ae4f03e59b3fadc0; UIFID=5cf5e23c61995d2d3ac60e3037090f2ed19001663b914111b9d9cfee882a1ea5765ef390cb866f373ef0f6386e568fd84c057164d2c70f64cf9eaba797fb673a47ba0319e340e1dd80587296e4400ad56e51002a78121b7cac491d5bda57d769cfc0b095b1f332d515f3abe0368134fd6b106a450e90a90ba8317486ab07a187bce87fe16955a703b87d93a8e163546832b0ef6b7dab58becc96d2c6f8a3341c; odin_tt=aaf5efc11ad10b062e6f9d4990f0c04ca2e6f5df782dc8ceeaaf2b8c5d3a22375ea8c8405c921c800a45c25fdc136d55e34cb333e8dc9b0bd2f3a302f5a2d339c237d2e9e088c0325c217177b46b7952; MONITOR_WEB_ID=e5ec706e-c747-4a77-8b29-c0ab5a402034; _tea_utm_cache_1243=undefined; dy_swidth=360; dy_sheight=792; __ac_nonce=0681f8e120052efb3a0cd; __ac_signature=_02B4Z6wo00f0173iebQAAIDC5h98AQEwnkO9wn0AAIdvde; x-web-secsdk-uid=30830ef7-31c9-4cf8-b4f0-4d351ff7cd42; douyin.com; device_web_cpu_core=8; device_web_memory_size=8; home_can_add_dy_2_desktop=%220%22; stream_recommend_feed_params=%22%7B%5C%22cookie_enabled%5C%22%3Atrue%2C%5C%22screen_width%5C%22%3A360%2C%5C%22screen_height%5C%22%3A792%2C%5C%22browser_online%5C%22%3Atrue%2C%5C%22cpu_core_num%5C%22%3A8%2C%5C%22device_memory%5C%22%3A8%2C%5C%22downlink%5C%22%3A10%2C%5C%22effective_type%5C%22%3A%5C%224g%5C%22%2C%5C%22round_trip_time%5C%22%3A0%7D%22; s_v_web_id=verify_maii8h0r_kPdSV5PV_HDvo_4sfL_B8Xg_HrzBIiWzdR3g; strategyABtestKey=%221746898453.488%22; is_dash_user=1; xgplayer_user_id=657600427999; passport_csrf_token=717f0f3ae3508ca0dfa7d2bfff62115a; passport_csrf_token_default=717f0f3ae3508ca0dfa7d2bfff62115a; volume_info=%7B%22isUserMute%22%3Afalse%2C%22isMute%22%3Afalse%2C%22volume%22%3A0.5%7D; FORCE_LOGIN=%7B%22videoConsumedRemainSeconds%22%3A180%2C%22isForcePopClose%22%3A1%7D; __security_mc_1_s_sdk_cert_key=f623fc79-4ae3-b68c; __security_mc_1_s_sdk_sign_data_key_web_protect=c8f8c43f-4bc7-b325; __security_mc_1_s_sdk_crypt_sdk=33e1355c-4e20-b7e5; bd_ticket_guard_client_data=eyJiZC10aWNrZXQtZ3VhcmQtdmVyc2lvbiI6MiwiYmQtdGlja2V0LWd1YXJkLWl0ZXJhdGlvbi12ZXJzaW9uIjoxLCJiZC10aWNrZXQtZ3VhcmQtcmVlLXB1YmxpYy1rZXkiOiJCTWc5YWRibmlSTnh1QU9MZzFONXhUdDF1aGtzUlc3Z2lzMWk2RmFJVmIvK2U5MkhraHFIUTZnL1c5bzdKR0k1dkZ4cWY4L2w0TnFLVmhmZFRXUzhxQ2s9IiwiYmQtdGlja2V0LWd1YXJkLXdlYi12ZXJzaW9uIjoyfQ%3D%3D; bd_ticket_guard_client_web_domain=2; gulu_source_res=eyJwX2luIjoiYjFmNDIwMGNjNzQ3NGU1ZDcyYjg0ZjIzYmM3YWZiZDg1YjFiNTU2YWU4YmY2NjA2ZmQ1OTJlZTNlYmUxMmU0NSJ9; sdk_source_info=7e276470716a68645a606960273f276364697660272927676c715a6d6069756077273f276364697660272927666d776a68605a607d71606b766c6a6b5a7666776c7571273f275e58272927666a6b766a69605a696c6061273f27636469766027292762696a6764695a7364776c6467696076273f275e5827292771273f27313c353733313d3c3d33313234272927676c715a75776a716a666a69273f2763646976602778; bit_env=7-W5e1TCj7kF2mqOLWAThhUGq8SGM3Jwpek2VYG807dnbVdDe-p_T-HlS-Et-l7_VMAqK7JuC2qCViRS41sogyJkel0TMueEfBpTn_HU7IQ6UBKKLNCXyyFZoC6JfJLwJfzpP1DRqRnmfLZKw1T5ycRJo5j1Rsg_V4WvVysrLL4NQB-reWOGwpf0cgkHZwEtCtoOEX79vfA7RRd4GcpHcKi5s_qVrdXe-EAzgHpugrZrydi11pc01u_7OMUaUvBfI7uH2WG8gWfjxlWj-1PGzfpxTjLdT8YheAAQnPWEXhF6itDxeBBtHgc3Q509HZrvhNmifOg3JI1uV0eZTc4Z_a8wXyEzgRBRdQ00VktngZXIUBWHXXUTr_8rygUfLumOl7M9uQ-liLv7UCNQgaZW-HTmNblYMUJo4ahKzfXze4lhnJXnJLqYhQYsxZjLrBOOaCKu6wpjUL4AAZRguYZH6NX9zl7bIO6yGnApJVeRBuCLZhpor0IosMFnep6oBiZPxW8BeyIVnvALPXWFdxwWySlCL0cdM3PAfLNsLXMlq5DE8OJBe6QlSoqHOGMKst4tOAkIQskeHkCasuDmuI5w2aJyNgDIDzNuCW9Bu3X8jrnJu0TeYyMaCoPsj6UZDfLo; passport_auth_mix_state=u1gksd0xlg0qvy57ak88dmrtuv0gvc2n1bkgazrs272iwh5w; xg_device_score=7.372174421456947; stream_player_status_params=%22%7B%5C%22is_auto_play%5C%22%3A0%2C%5C%22is_full_screen%5C%22%3A0%2C%5C%22is_full_webscreen%5C%22%3A0%2C%5C%22is_mute%5C%22%3A0%2C%5C%22is_speed%5C%22%3A1%2C%5C%22is_visible%5C%22%3A1%7D%22; IsDouyinActive=true; biz_trace_id=1e5e5bf8"
 }
 
-response = requests.post(url, data=json.dumps(payload), headers=headers)
+response = requests.post(url, params=params, data=payload, headers=headers)
 
 print(response.text)
