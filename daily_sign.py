@@ -7,10 +7,10 @@ payload = {
   "method": "zeppStep",
   "params": [
     {
-      "ip": "246.219.21.185",
+      "ip": "160.82.171.196",
       "zeppId": "1133421351",
-      "appToken": "ZQVBQFJyQktGHlp6QkpbRl5LRl5qek4uXAQABAAAAAHypV5bKTBuTiDW9vN7FR4ODxDhoGkmBXWYj9WzJZCwnrcll35hRNWuO8qkxAkex5bL1vIu1FdwDnan-h0fat4cp9JPIi7nYKVhWc0NU2LjzE-5askc0outOPWcJU2tK8o-M7Hd_hSckCdKLDtDmaqR6othzUVvS6bg-ZjbGiQqxtdHxhJJomSGshQdcpMiC2Q",
-      "step": "666666"
+      "appToken": "ZQVBQFJyQktGHlp6QkpbRl5LRl5qek4uXAQABAAAAAMTND1NmwNAM7h3C5nGQnRuyt_hk3KIeeYEOW629c-K95wxevNvGPAXpIKivaO03MQtbfgT-XFe4UVmHLj4n_LKNuzoCOR_xFKMzFnEJD_wtoH40L2VoKLGNRtoLFt4IKRu-Gx3pGz34KrWznvOQbBEieFAkOztdjo-viyk7M1kwWvb3FwCLlI3DCAtUpWnRIw",
+      "step": "66666"
     }
   ],
   "clientInfo": {
@@ -47,20 +47,20 @@ headers = {
   'Accept-Encoding': "gzip, deflate, br, zstd",
   'Content-Type': "application/json",
   'x-to-function-name': "zeppTodo",
-  'x-request-id': "48138a59-7e99-4c36-a148-bd5849e39ca6",
-  'Authorization': "HMAC-SHA256 Credential=hzDTSCpEIdojYZSE, SignedHeaders=x-client-timestamp;x-from-app-id;x-from-env-id;x-from-function-name;x-from-instance-id;x-to-env-id;x-to-function-name, Signature=3c1cc92cd8a180d99b53a87dda99b210379c484163da6abf81abbec30f540f61",
+  'x-request-id': "4f7d4af8-7707-422b-b603-59121ffbf1cd",
+  'Authorization': "HMAC-SHA256 Credential=hzDTSCpEIdojYZSE, SignedHeaders=x-client-timestamp;x-from-app-id;x-from-env-id;x-from-function-name;x-from-instance-id;x-to-env-id;x-to-function-name, Signature=6b2b3d86c2c755b0f2d9726206ad5f130b461dd45e84ac49adec524ce8170a85",
   'x-from-env-id': "env-00jxtfd3wr9d",
   'sec-ch-ua': "\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Android WebView\";v=\"134\"",
   'sec-ch-ua-mobile': "?1",
   'sec-ch-ua-platform': "\"Android\"",
-  'x-from-instance-id': "1746899834581",
-  'x-client-timestamp': "1746899834581",
+  'x-from-instance-id': "1747072353157",
+  'x-client-timestamp': "1747072353157",
   'x-to-env-id': "env-00jxtfd3wr9d",
-  'x-trace-id': "48138a59-7e99-4c36-a148-bd5849e39ca6",
+  'x-trace-id': "4f7d4af8-7707-422b-b603-59121ffbf1cd",
   'x-from-app-id': "2021005136661698",
   'x-alipay-source': "client",
   'x-from-function-name': "zeppTodo",
-  'x-alipay-callid': "48138a59-7e99-4c36-a148-bd5849e39ca6",
+  'x-alipay-callid': "4f7d4af8-7707-422b-b603-59121ffbf1cd",
   'Origin': "https://mm-2g2i5f9t68b62f2e-1305007022.tcloudbaseapp.com",
   'X-Requested-With': "privacy.explorer.fast.safe.browser",
   'Sec-Fetch-Site': "cross-site",
@@ -68,7 +68,7 @@ headers = {
   'Sec-Fetch-Dest': "empty",
   'Referer': "https://mm-2g2i5f9t68b62f2e-1305007022.tcloudbaseapp.com/",
   'Accept-Language': "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
-  'Cookie': "aliyungf_tc=4d1f7de2b1633ba1e84515ef173aca9a57d0884ef9bfdcf46036a2a5cddff0a8"
+  'Cookie': "aliyungf_tc=eb1fc10225620daf37e8576bc27b6fdf07799fe47e171d940827207e544aa846"
 }
 
 response = requests.post(url, data=json.dumps(payload), headers=headers)
