@@ -7,10 +7,10 @@ payload = {
   "method": "zeppStep",
   "params": [
     {
-      "ip": "249.97.208.192",
+      "ip": "246.219.21.185",
       "zeppId": "1133421351",
       "appToken": "ZQVBQFJyQktGHlp6QkpbRl5LRl5qek4uXAQABAAAAAHypV5bKTBuTiDW9vN7FR4ODxDhoGkmBXWYj9WzJZCwnrcll35hRNWuO8qkxAkex5bL1vIu1FdwDnan-h0fat4cp9JPIi7nYKVhWc0NU2LjzE-5askc0outOPWcJU2tK8o-M7Hd_hSckCdKLDtDmaqR6othzUVvS6bg-ZjbGiQqxtdHxhJJomSGshQdcpMiC2Q",
-      "step": "66666"
+      "step": "33333"
     }
   ],
   "clientInfo": {
@@ -47,27 +47,28 @@ headers = {
   'Accept-Encoding': "gzip, deflate, br, zstd",
   'Content-Type': "application/json",
   'x-to-function-name': "zeppTodo",
-  'x-request-id': "14c6a6bb-98df-43c8-9ca8-79da0999dca5",
-  'Authorization': "HMAC-SHA256 Credential=hzDTSCpEIdojYZSE, SignedHeaders=x-client-timestamp;x-from-app-id;x-from-env-id;x-from-function-name;x-from-instance-id;x-to-env-id;x-to-function-name, Signature=a59bfcc00d74d1e34fa63c0dc0a42a63de97d01fb29f77e8052a8e1df3f0361a",
+  'x-request-id': "48138a59-7e99-4c36-a148-bd5849e39ca6",
+  'Authorization': "HMAC-SHA256 Credential=hzDTSCpEIdojYZSE, SignedHeaders=x-client-timestamp;x-from-app-id;x-from-env-id;x-from-function-name;x-from-instance-id;x-to-env-id;x-to-function-name, Signature=3c1cc92cd8a180d99b53a87dda99b210379c484163da6abf81abbec30f540f61",
   'x-from-env-id': "env-00jxtfd3wr9d",
   'sec-ch-ua': "\"Chromium\";v=\"134\", \"Not:A-Brand\";v=\"24\", \"Android WebView\";v=\"134\"",
   'sec-ch-ua-mobile': "?1",
   'sec-ch-ua-platform': "\"Android\"",
-  'x-from-instance-id': "1746981963411",
-  'x-client-timestamp': "1746981963411",
+  'x-from-instance-id': "1746899834581",
+  'x-client-timestamp': "1746899834581",
   'x-to-env-id': "env-00jxtfd3wr9d",
-  'x-trace-id': "14c6a6bb-98df-43c8-9ca8-79da0999dca5",
+  'x-trace-id': "48138a59-7e99-4c36-a148-bd5849e39ca6",
   'x-from-app-id': "2021005136661698",
   'x-alipay-source': "client",
   'x-from-function-name': "zeppTodo",
-  'x-alipay-callid': "14c6a6bb-98df-43c8-9ca8-79da0999dca5",
+  'x-alipay-callid': "48138a59-7e99-4c36-a148-bd5849e39ca6",
   'Origin': "https://mm-2g2i5f9t68b62f2e-1305007022.tcloudbaseapp.com",
   'X-Requested-With': "privacy.explorer.fast.safe.browser",
   'Sec-Fetch-Site': "cross-site",
   'Sec-Fetch-Mode': "cors",
   'Sec-Fetch-Dest': "empty",
   'Referer': "https://mm-2g2i5f9t68b62f2e-1305007022.tcloudbaseapp.com/",
-  'Accept-Language': "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7"
+  'Accept-Language': "zh-CN,zh;q=0.9,en-US;q=0.8,en;q=0.7",
+  'Cookie': "aliyungf_tc=4d1f7de2b1633ba1e84515ef173aca9a57d0884ef9bfdcf46036a2a5cddff0a8"
 }
 
 response = requests.post(url, data=json.dumps(payload), headers=headers)
